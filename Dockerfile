@@ -7,7 +7,7 @@ RUN apk add --no-cache \
       ca-certificates \
       curl
 
-RUN curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-${HEARTBEAT}-linux-x86_64.tar.gz && \
+RUN curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-${HEARTBEAT_VERSION}-linux-x86_64.tar.gz && \
     tar -xvvf heartbeat-${HEARTBEAT_VERSION}-linux-x86_64.tar.gz && \
     mv heartbeat-${HEARTBEAT_VERSION}-linux-x86_64/ /heartbeat && \
     mv /heartbeat/heartbeat.yml /heartbeat/heartbeat.example.yml && \
